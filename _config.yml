@@ -1,0 +1,4 @@
+# Configuración básica de Jekyll
+title: wdd130
+description: Un sitio web creado con Jekyll y GitHub Pages
+theme: minima
