@@ -10,16 +10,16 @@ body {
 :root {
   --primary-color: #60A9BF;
   --secondary-color: #FFFFFF;
-  --accent1-color: #EBF8FC;
-  --accent2-color: #EDFFFF;
+  --accent1-color: #C4E7F2;
+  --accent2-color: #81E66F;
 
   --heading-font: 'Open Sans', serif;
   --paragraph-font: 'LIbre Franklin', serif;
 
-  --nav-background-color: #XXXXXX;
-  --nav-link-color: #XXXXXX;
-  --nav-hover-link-color: #XXXXXX;
-  --nav-hover-background-color: #XXXXXX;
+  --nav-background-color: #60A9BF;
+  --nav-link-color: #FFFFFF;
+  --nav-hover-link-color: #C4E7F2;
+  --nav-hover-background-color: #81E66F;
 }
 
 body {
