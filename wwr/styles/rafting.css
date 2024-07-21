@@ -1,12 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=font-name&family=optional-2nd-font-name&display=swap');
 
-body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    padding: 20px;
-  }
-
 :root {
     --primary-color: #60A9BF;
     --secondary-color: #FFFFFF;
@@ -17,32 +11,86 @@ body {
     --paragraph-font: 'LIbre Franklin', serif;
   
     --nav-background-color: #60A9BF;
-    --nav-link-color: #FFFFFF;
-    --nav-hover-link-color: #C4E7F2;
+    --nav-link-color: #7288eb;
+    --nav-hover-link-color: #10baee;
     --nav-hover-background-color: #81E66F;
-  }
+ }
 
   body {
     font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+    width: 100%;
     max-width: 960px;
     padding: 20px;
+    background-color: var(--secondary-color);
   }
  
-h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-}
+  }
 
-header {
+header.section-header {
     padding: 10px 0;
     background-color: var(--accent1-color);
     text-align: center;
+    margin:0;
+	  display: grid;
+	  grid-template-columns: 120px 1fr 2fr;
+	  align-items: center;
+	  border-bottom: 1px solid #ccc;
+	  max-width: 960px;  
   }
 
-  header .logo img {
-    max-height: 50px;
-    vertical-align: middle;
+.logo img {
+  margin: 0 0.25rem 0 1rem;
+	width: 64px;
+	height: auto;
 }
+
+nav {
+	text-align: center;
+}
+
+.navigation {
+	display: flex;
+	list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+	flex: 1 1 100%;
+}
+
+.navigation a {
+	display: block;
+	color: var(--nav-link-color);
+	padding: 20px;
+  font-weight: 600;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: var(--nav-hover-link-color);
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+
 
 main {
     padding: 20px;
@@ -54,41 +102,133 @@ a {
     text-decoration: none;
   }
 
+  .hero {
+    position: relative;
+    text-align: center;
+    color: black;
+    padding: 20px;
+  }
+
 .hero img {
   display: block;
   width: 100%;
   height: auto;
+  opacity: 0.8;
 }
-
-.hero img {
-    width: 100%;
-    display: block;
-    opacity: 0.8;
-}   
+ 
 
 .hero h1 {
     position: absolute;
-    top: 50%;
+    margin: 0;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+    transform: translateX(-50%);
+    color: var(--primary-color);
     font-size: 3em;
 }
 
 article {
     background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row-reverse;
+
 }
 
 article img {
-    float: right;
-    margin-left: 20px;
-    max-width: 50%;
+  max-width: 250px; 
+  height: auto;
+  margin-left: 20px;
 }
 
-section {
-    margin-top: 20px;
+article p {
+  max-width: 600px; 
+  text-align: left; 
+}
+
+.history {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.history h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+.history .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history p {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  gap: 20px; 
+}
+
+.history img {
+  max-width: 150px; 
+  height: auto;
+}
+
+.history img {
+  max-width: 50%; 
+}
+
+.adventure {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.adventure img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.adventure h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1em;
+  color: var(--accent2-color);
 }
 
 footer .sociallinks {
@@ -96,6 +236,16 @@ footer .sociallinks {
     
 }
 
-footer .sociallinks a {
-    margin: 0 10px;
+.section-footer {
+  text-align: center;
+  margin-top: 20px;
 }
+
+footer .sociallinks {
+  margin-top: 10px;
+}
+
+footer .sociallinks a {
+  margin: 0 10px;
+}
+
