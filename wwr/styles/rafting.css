@@ -5,7 +5,7 @@
     --primary-color: #60A9BF;
     --secondary-color: #FFFFFF;
     --accent1-color: #C4E7F2;
-    --accent2-color: #81E66F;
+    --accent2-color: #58bb46;
   
     --heading-font: 'Open Sans', serif;
     --paragraph-font: 'LIbre Franklin', serif;
@@ -222,6 +222,7 @@ figure {
 figure img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 figcaption {
@@ -231,21 +232,24 @@ figcaption {
   color: var(--accent2-color);
 }
 
-footer .sociallinks {
-    margin-top: 10px;
-    
-}
-
 .section-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   text-align: center;
-  margin-top: 20px;
 }
 
 footer .sociallinks {
-  margin-top: 10px;
+  display: flex;
 }
 
 footer .sociallinks a {
   margin: 0 10px;
+}
+
+footer .sociallinks img {
+  width: 24px; 
+  height: auto;
 }
 
