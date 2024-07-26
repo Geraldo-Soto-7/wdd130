@@ -5,7 +5,7 @@
     --primary-color: #60A9BF;
     --secondary-color: #FFFFFF;
     --accent1-color: #C4E7F2;
-    --accent2-color: #58bb46;
+    --accent2-color: #15703e;
   
     --heading-font: 'Open Sans', serif;
     --paragraph-font: 'LIbre Franklin', serif;
@@ -170,7 +170,6 @@ article p {
 
 .history p {
   display: flex;
-  align-items: left;
   justify-content: left;
   text-align: left;
   gap: 20px; 
